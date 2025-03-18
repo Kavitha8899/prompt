@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handling Example</title>
+</head>
+<body>
+
+  <h2>Event Handling Demonstration</h2>
+
+  <button id="clickButton">Click Me</button>
+  
+  
+  <input type="text" id="textInput" placeholder="Type something...">
+  
+  
+  <select id="dropdown">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+  </select>
+
+  
+  <form id="myForm">
+    <label for="formInput">Enter something: </label>
+    <input type="text" id="formInput" required>
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <script>
+    document.getElementById("clickButton").addEventListener("click", function() {
+      alert("Button clicked!");
+    });
+
+    document.getElementById("clickButton").addEventListener("mouseover", function() {
+      console.log("Mouse is over the button!");
+    });
+
+    
+    document.getElementById("textInput").addEventListener("keydown", function(event) {
+      console.log("Key pressed down: " + event.key);
+    });
+
+    
+    document.getElementById("textInput").addEventListener("keyup", function(event) {
+      console.log("Key released: " + event.key);
+    });
+
+    
+    window.addEventListener("load", function() {
+      console.log("Page has loaded!");
+    });
+
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      alert("Form submitted!");
+    });
+
+    document.getElementById("dropdown").addEventListener("change", function() {
+      alert("You selected: " + this.value);
+    });
+  </script>
+
+</body>
+</html>

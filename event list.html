@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <h1> events</h1>
+    <label> name:</label>
+   <input type="text" id = "kavi" onclick="di()"><br><br>
+   <label> password:</label>
+   <input type ="password" id="kavi" onclick="di()" placeholder=" "enter the password>
+   <br><br>
+   <label> select your city</label>
+   <select id = "the" onchange="dis()">
+    <option> shivamogga</option>
+    <option> bangalure</option>
+    <option>mysure</option>
+   </select>
+   <button id = "one" onmouseover="hover"> login</button>
+   <button id = "two" onsubmit="good()"> submit</button>
+
+
+
+    <script>
+        document.getElementById('one').addEventListener('mouseover',()=>alert("hovered me"))
+       function di(){
+        alert("you clicked");
+       }
+       function dis(){
+        alert("you changed the city");
+       }
+       //document.getElementById('two').addEventListener('submit',()=>alert("you are submitted the form"))
+       function good()
+       {
+        alert("good g")
+       }
+    </script>
+</body>
+</html>
